@@ -10,21 +10,21 @@ function GuessInput({ handleSubmitGuesses, status }) {
   }
 
   return (
-      <form className="guess-input-wrapper" onSubmit={handleSubmit}>
-        <label htmlFor="guess-input">Enter guess:</label>
-        <input
-          id="guess-input"
-          type="text"
-          value={guess}
-          onChange={(event) => {
-            const nextPrompt = event.target.value.toUpperCase();
-            setGuess(nextPrompt);
-          }}
-          pattern="[a-zA-Z]{5}"
-          title="5 letter word"
-          disabled={status === "loss"}
-        />
-      </form>
+    <form className="guess-input-wrapper" onSubmit={handleSubmit}>
+      <label htmlFor="guess-input">Enter guess:</label>
+      <input
+        id="guess-input"
+        type="text"
+        value={guess}
+        onChange={(event) => {
+          const nextPrompt = event.target.value.toUpperCase();
+          setGuess(nextPrompt);
+        }}
+        pattern="[a-zA-Z]{5}"
+        title="5 letter word"
+        disabled={status === "loss"}
+      />
+    </form>
   );
 }
 

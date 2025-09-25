@@ -24,8 +24,7 @@ function Game() {
     setResults(newResults);
     if (guess === answer) {
       setStatus("won");
-    }
-    else if (results.length+1 >= NUM_OF_GUESSES_ALLOWED) {
+    } else if (results.length + 1 >= NUM_OF_GUESSES_ALLOWED) {
       setStatus("loss");
     }
   }
@@ -50,7 +49,10 @@ function Banner({ status, numGuesses }) {
         <div className="happy banner">
           <p>
             <strong>Congratulations!</strong> Got it in{" "}
-            <strong>{numGuesses === 1 ? '1 guess' : `${numGuesses} guesses`}</strong>.
+            <strong>
+              {numGuesses === 1 ? "1 guess" : `${numGuesses} guesses`}
+            </strong>
+            .
           </p>
         </div>
       )}
